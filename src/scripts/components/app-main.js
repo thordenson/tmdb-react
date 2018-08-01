@@ -48,12 +48,12 @@ class App extends Component {
     } // end function
 
     fetchMovieID(movieID) {
-        let url = `https://api.themoviedb.org/3/movie/${movieID}?&api_key=cfe422613b250f702980a3bbf9e90716`
+        let url = `https://api.themoviedb.org/3/movie/${movieID}?&api_key=b7079ee99736213dd8c1453c60f28964`
         this.fetchApi(url)
     } // end function
 
     componentDidMount() {
-        let url = `https://api.themoviedb.org/3/movie/${this.state.movieID}?&api_key=cfe422613b250f702980a3bbf9e90716`
+        let url = `https://api.themoviedb.org/3/movie/${this.state.movieID}?&api_key=b7079ee99736213dd8c1453c60f28964`
         this.fetchApi(url)
 
     //========================= BLOODHOUND ==============================//
@@ -63,7 +63,7 @@ class App extends Component {
             },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         remote: {
-            url: 'https://api.themoviedb.org/3/search/movie?query=%QUERY&api_key=cfe422613b250f702980a3bbf9e90716',
+            url: 'https://api.themoviedb.org/3/search/movie?query=%QUERY&api_key=b7079ee99736213dd8c1453c60f28964',
         filter: function(movies) {
             // Map the remote source JSON array to a JavaScript object array
             return $.map(movies.results, function(movie) {
